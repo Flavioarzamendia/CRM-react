@@ -1,4 +1,9 @@
-import {useNavigate} from 'react-router-dom'
+import {useNavigate, Form} from 'react-router-dom'
+import Formulario from '../components/Formulario'
+
+export function action(){
+  console.log("Submit al formulario")
+}
 
 const NuevoCliente = () => {
 
@@ -13,7 +18,24 @@ const NuevoCliente = () => {
         onClick={() => navegate(-1)}
         >
             Volver
-            </button>
+            </button> 
+
+    </div>
+    
+
+    <div className='bg-white shadow rounded-md md:w-3/4 mx-auto px-5 py-10 mt-20'>
+
+      <Form
+      method='post'
+      
+      >
+      <Formulario/>
+      <input type="submit" 
+      className='w-full mt-5 bg-blue-600 text-white p-3 text-center uppercase font-bold text-lg hover:bg-blue-700 '
+      value="Registrar cliente"
+      />
+      </Form>
+      
 
     </div>
     </>
